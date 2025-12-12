@@ -19,7 +19,6 @@ public class Coach extends User {
     private String specialties; // e.g. "strength,cardio,yoga"
 
 
-    // rate per hour
     private Double hourlyRate;
 
 

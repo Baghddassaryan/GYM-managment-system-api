@@ -21,6 +21,7 @@ public class User  {
     private Long id;
 
 
+
     @Email
     @NotBlank
     @Column(nullable = false, unique = true)
@@ -54,21 +55,11 @@ public class User  {
     private boolean active = true;
 
 
-    // QR payload associated with the user (e.g. membership QR token)
-    @Column(unique = true, length = 128)
-    private String qrToken;
 
-
-    // For future: reference to externally stored QR image or badge file path
-    private String qrImagePath;
 
 
 // Constructors, getters, setters omitted for brevity (generate via IDE)
 public User() {}
-
-
-// Getters and setters...
-// (In production prefer Lombok to reduce boilerplate or generate methods)
 
 
     public Long getId() { return id; }
@@ -88,8 +79,5 @@ public User() {}
     public Instant getCreatedAt() { return createdAt; }
     public boolean isActive() { return active; }
     public void setActive(boolean active) { this.active = active; }
-    public String getQrToken() { return qrToken; }
-    public void setQrToken(String qrToken) { this.qrToken = qrToken; }
-    public String getQrImagePath() { return qrImagePath; }
-    public void setQrImagePath(String qrImagePath) { this.qrImagePath = qrImagePath; }
+
 }
