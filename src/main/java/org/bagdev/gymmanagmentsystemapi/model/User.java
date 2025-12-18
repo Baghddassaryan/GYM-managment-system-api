@@ -10,11 +10,11 @@ import java.time.Instant;
 import java.util.HashSet;
 import java.util.Set;
 
-
 @Entity
 @Table(name = "users", indexes = {
         @Index(name = "idx_users_email", columnList = "email")
 })
+@Inheritance(strategy = InheritanceType.JOINED)
 public class User  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
